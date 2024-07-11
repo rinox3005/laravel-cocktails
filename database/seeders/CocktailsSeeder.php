@@ -62,8 +62,8 @@ class CocktailsSeeder extends Seeder
 
         for ($i = 0; $i < 20; $i++) {
             $cocktail = new Cocktail();
-            $cocktail->name = $faker->randomElement($names);
-            $cocktail->price = $faker->randomFloat(2, 5, 100);
+            $cocktail->name = $names[$i];
+            $cocktail->price = $faker->randomFloat(2, 5, 50);
             $cocktail->description = $faker->paragraph(3);
             $cocktail->ingredients = 'alcool';
             $cocktail->type_of_prep = $faker->randomElement($type_of_prep);
