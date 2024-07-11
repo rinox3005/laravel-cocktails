@@ -43,7 +43,7 @@ Cocktails - Choose Yours
 @endphp
 
 @section("main")
-    <div class="d-flex">
+    <div class="row row-cols-3">
         @foreach ($cocktails as $cocktail)
             <div class="col">
                 @include("partials.cocktail")    
