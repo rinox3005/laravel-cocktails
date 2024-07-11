@@ -8,7 +8,10 @@ use App\Models\Cocktail;
 
 class CocktailController extends Controller
 {
-     $cocktails = Cocktail::all();
+    public function index()
+    {
+        $cocktails = Cocktail::all();
 
-return view('home', compact('cocktails'));
+        return view('home', compact('cocktails'));
+    }
 }
