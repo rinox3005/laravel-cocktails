@@ -43,7 +43,7 @@ Cocktails - Choose Yours
 @endphp
 
 @section("main")
-    <div class="row row-cols-3">
+    <div class="row row-cols-4 g-4">
         @foreach ($cocktails as $cocktail)
             <div class="col">
                 @include("partials.cocktail")    
@@ -52,7 +52,4 @@ Cocktails - Choose Yours
     </div>
 
 @endsection
-    {{-- <img
-        src="{{ Vite::asset("resources/img/duck.jpg") }}"
-        alt="Paperella Laravel Template"
-    /> --}}
+    {{--  --}}
