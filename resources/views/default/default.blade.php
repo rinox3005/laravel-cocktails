@@ -7,8 +7,10 @@
     <title>@yield('page_title', "Cocktails")</title>
 </head>
 <body>  
-    <div class="container">
-        @yield("main");
-    </div>  
+    <main>
+        <div class="container">
+            @yield("main")
+        </div>  
+    </main>
 </body>
 </html>
