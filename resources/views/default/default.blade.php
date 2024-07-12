@@ -8,6 +8,9 @@
     <title>@yield('page_title', "Cocktails")</title>
 </head>
 <body>  
+    <header class="position-sticky top-0 z-3">
+        @include("partials.navbar")
+    </header>
     <main>
         <div class="container">
             @yield("main")
