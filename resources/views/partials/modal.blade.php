@@ -4,7 +4,7 @@
     <div class="modal-content">
         <p>Are you sure you want to delete the cocktail?</p>
         <div class="modal-buttons">
-            <form action="{{ route('admin.cocktails.destroy', $cocktail->id) }}" method="POST">
+            <form action="{{ route('cocktails.destroy', $cocktail->id) }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button>Confirm</button>
