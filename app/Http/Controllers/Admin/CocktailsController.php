@@ -101,7 +101,7 @@ class CocktailsController extends Controller
 
         $cocktail->update($data);
 
-        return redirect()->route('admin.cocktails.show', $cocktail->id)->with('message', 'Cocktail ' . $cocktail->name . ' successfully updated');
+        return redirect()->route('cocktails.show', $cocktail->id)->with('message', 'Cocktail ' . $cocktail->name . ' successfully updated');
     }
 
     /**
@@ -111,6 +111,6 @@ class CocktailsController extends Controller
     {
         $cocktail = Cocktail::findOrFail($id);
         $cocktail->delete();
-        return redirect()->route('admin.cocktails.index')->with('message', 'Cocktail deleted successfully.');
+        return redirect()->route('cocktails.index')->with('message', 'Cocktail deleted successfully.');
     }
 }
