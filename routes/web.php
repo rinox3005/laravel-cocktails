@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Guest\CocktailController;
-use App\Http\Controllers\Admin\CocktaislController;
+use App\Http\Controllers\Admin\CocktailsController;
 use Illuminate\Support\Facades\Route;
 
 /*
