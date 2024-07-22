@@ -24,7 +24,7 @@ class UpdateCocktailRequest extends FormRequest
         return [
             'name' => ['max:100', 'required'],
             'price' => ['min:0', 'numeric', 'regex:/\d+(\.\d{0,2})?/'],
-            'img_url' => ['url', 'max:255'],
+            'img_url' => ['url:http,https', 'max:255'],
             'description' => ['max:255', 'string', 'required'],
             'ingredients' => ['max:255', 'required', 'string'],
             'type_of_prep' => ['max:30', 'required', 'string'],
