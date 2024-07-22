@@ -50,8 +50,13 @@
 
                 {{-- preparation type --}}
                 <div class="mt-3 form-group">
-                    <label for="type_of_prep">Tipo di preparazione</label>
-                    <input type="text" name="type_of_prep" id="type_of_prep" class="form-control" required>
+                    {{-- <label for="type_of_prep">Tipo di preparazione</label>
+                    <input type="text" name="type_of_prep" id="type_of_prep" class="form-control" required> --}}
+                    <select class="form-select" aria-label="Default select example">
+                        @foreach ($type_of_prep as $prep)
+                            <option value="{{ $prep }}">{{ $prep }}</option>
+                        @endforeach
+                    </select>
                 </div>
 
                 {{-- preparation time --}}
