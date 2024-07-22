@@ -14,7 +14,7 @@
                 <p class="card-text">{{ $cocktail->description }}</p>
                 <p class="card-text">{{ $cocktail->type_of_prep }}</p>
                 <div class="buttons align-self-end">
-                    <a href="{{ route('admin.cocktails.index') }}" class="btn btn-secondary">Go Back</a>
+                    <a href="{{ route('cocktails.index') }}" class="btn btn-secondary">Go Back</a>
                     <button class="btn btn-danger">Delete Cocktail</button>
                 </div>
             </div>
