@@ -24,7 +24,30 @@ class CocktailsController extends Controller
      */
     public function create()
     {
-        return view('admin.cocktails.create');
+
+        $type_of_prep = [
+            "Shaken",
+            "Stirred",
+            "Blended",
+            "Muddled",
+            "Built",
+            "Layered",
+            "Swizzled",
+            "Thrown",
+            "Rolled",
+            "Smashed",
+            "Float",
+            "Infused",
+            "Steeped",
+            "Carbonated",
+            "Flamed",
+            "Nitro",
+            "Frothy",
+            "Foamed",
+            "Clarified",
+            "Fat-Washed"
+        ];
+        return view('admin.cocktails.create', compact('type_of_prep'));
     }
 
     /**

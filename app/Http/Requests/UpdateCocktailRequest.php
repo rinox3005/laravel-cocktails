@@ -23,12 +23,12 @@ class UpdateCocktailRequest extends FormRequest
     {
         return [
             'name' => ['max:100', 'required'],
-            'price' => ['min:0', 'numeric', 'regex:\d+(\.\d{0,2})?'],
+            'price' => ['min:0', 'numeric', 'regex:/\d+(\.\d{0,2})?/'],
             'img_url' => ['url', 'max:255'],
             'description' => ['max:255', 'string', 'required'],
             'ingredients' => ['max:255', 'required', 'string'],
             'type_of_prep' => ['max:30', 'required', 'string'],
-            'serving_temp' => ['numeric', 'required', 'regex:\d+(\.\d{0,1})?'],
+            'serving_temp' => ['numeric', 'required', 'regex:/\d+(\.\d{0,1})?/'],
             'glass_type' => ['max:100', 'string'],
             'needs_ice' => ['max:1', 'min:0', 'required'],
             'preparation' => ['max:30000', 'string'],
