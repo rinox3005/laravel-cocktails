@@ -47,7 +47,16 @@
 
                 {{-- ingredients --}}
                 <div class="mt-3 form-group">
-                    <label for="ingredients">Ingredienti (separati da virgola)</label>
+                    <label for="ingredients">Ingredienti: </label>
+                    <div class="d-flex flex-wrap justify-content-between">
+                        @foreach ($ingredients as $ingredient)
+                            <div class="col-4 d-flex flex-column justfy-content-center align-items-center">
+                                <span class="mb-2">{{ $ingredient->title }}</span>
+                                <input class="checkbox" name="techs[]" type="checkbox" value="{{ $ingredient->id }}"
+                                    {{ in_array($ingredient->id, old('techs', [])) ? 'checked' : '' }}>
+                            </div>
+                        @endforeach
+                    </div>
                     <input type="text" name="ingredients" id="ingredients" class="form-control" required>
                 </div>
 
