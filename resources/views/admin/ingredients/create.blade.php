@@ -18,6 +18,7 @@
             @endif
             <form class="mt-5" action="{{ route('ingredients.store') }}" method="POST">
                 @csrf
+
                 {{-- Name --}}
                 <div class="form-group">
                     <label for="name">Nome</label>
@@ -28,8 +29,8 @@
                 {{-- type --}}
                 <div class="mt-3 form-group">
                     <label>Tipo di ingrediente</label>
-                    <select name="types" class="form-select" aria-label="Default select example">
-                        @foreach ($types as $type)
+                    <select name="type" class="form-select" aria-label="Default select example">
+                        @foreach ($ingredients_types as $type)
                             <option value="{{ $type }}">{{ $type }}</option>
                         @endforeach
                     </select>
@@ -40,7 +41,7 @@
 
                     <label for="grade">Gradazione Alcolica</label>
                     <input value="{{ old('grade', $ingredient->grade ?? '') }}" type="number" name="grade" id="grade"
-                        class="form-control" step="0.1" required>
+                        class="form-control" step="0.1">
                 </div>
 
                 <button type="submit" class="btn btn-primary mt-3">Create Ingredient</button>
