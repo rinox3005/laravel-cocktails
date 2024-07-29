@@ -5,20 +5,20 @@ Ingredients
 @endsection
 
 @section('main')
-<div class="row row-cols-lg-4 row-cols-md-3 g-4 justify-content-center my-5">
+<ul>
     @foreach ($ingredients as $ingredient)
-    <div class="col">
-        <div class="card" style="width: 18rem">
-            <img class="card-img-top" src="{{ Vite::asset('resources/img/default.jpg') }}" alt="Paperella Laravel Template" />
-            <div class="card-body d-grid">
-                <h5 class="card-title">{{ $ingredient->name }}</h5>
-                <div class="buttons align-self-end">
-                    <button class="btn btn-danger myBtn">Delete Cocktail</button>
-                </div>
+    <li class="m-2">
+        <div class="w-75">
+            <div class="d-flex justify-content-between align-items-center mb-1 mt-3">
+                <span class="title"><strong>{{$ingredient['name']}}</strong></span>
+                <button class="btn btn-outline-danger ms-3 delete-button">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
             </div>
+            <hr>
         </div>
-    </div>
+    </li>
     @endforeach
     @include('partials.modal')
-</div>
+</ul>
 @endsection
