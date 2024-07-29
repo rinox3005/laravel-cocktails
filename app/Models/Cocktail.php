@@ -12,4 +12,9 @@ class Cocktail extends Model
     protected $fillable = [
         'name', 'price', 'description', 'ingredients', 'type_of_prep', 'serving_temp', 'glass_type', 'needs_ice', 'preparation', 'is_available'
     ];
+
+    public function ingredients()
+    {
+        return $this->belongsToMany(Ingredient::class);
+    }
 }
