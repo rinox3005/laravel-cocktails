@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ingredient;
 use Illuminate\Http\Request;
 
 class IngredientsController extends Controller
@@ -12,7 +13,9 @@ class IngredientsController extends Controller
      */
     public function index()
     {
-        //
+        $ingredients = Ingredient::all();
+
+        return view('admin.ingredients.index', compact('ingredients'));
     }
 
     /**
@@ -60,6 +63,9 @@ class IngredientsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $ingredient = Ingredient::find($id);
+
+        $ingredient->delete();
+        return redirect()->route('admin.ingredients.index');
     }
 }
