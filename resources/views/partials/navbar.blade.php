@@ -21,6 +21,10 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Etc</a>
           </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('cocktails.index') }}">Admin Panel</a>
+          </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search your drink" aria-label="Search">
