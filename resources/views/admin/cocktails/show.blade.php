@@ -13,9 +13,9 @@
                 <h5 class="card-title">{{ $cocktail->name }}</h5>
                 <p class="card-text">{{ $cocktail->description }}</p>
                 <p class="card-text">{{ $cocktail->type_of_prep }}</p>
-                <div class="buttons align-self-end">
+                <div class="buttons align-self-end text-center">
                     <a href="{{ route('cocktails.index') }}" class="btn btn-secondary">Go Back</a>
-                    <button id="myBtn" class="btn btn-danger">Delete Cocktail</button>
+                    <button class="btn btn-danger myBtn">Delete Cocktail</button>
                 </div>
             </div>
         </div>
