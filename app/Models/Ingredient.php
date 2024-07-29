@@ -13,6 +13,6 @@ class Ingredient extends Model
 
     public function cocktails()
     {
-        return $this->belongsToMany(Cocktail::class);
+        return $this->belongsToMany(Cocktail::class)->withPivot('percentage');
     }
 }
