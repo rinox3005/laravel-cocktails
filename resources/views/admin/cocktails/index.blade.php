@@ -15,7 +15,7 @@
                         <h5 class="card-title">{{ $cocktail->name }}</h5>
                         <p class="card-text">{{ $cocktail->description }}</p>
                         <p class="card-text">{{ $cocktail->type_of_prep }}</p>
-                        <div class="buttons align-self-end">
+                        <div class="buttons align-self-end text-center">
                             <a href="{{ route('cocktails.show', $cocktail->id) }}" class="btn btn-secondary">More Info</a>
                             <button class="btn btn-danger myBtn">Delete Cocktail</button>
                         </div>
