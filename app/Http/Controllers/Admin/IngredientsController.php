@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Ingredient;
 use Illuminate\Http\Request;
-use App\Models\Ingredient;
 use App\Http\Requests\StoreIngredientsRequest;
 use App\Http\Requests\UpdateIngredientsRequest;
 
