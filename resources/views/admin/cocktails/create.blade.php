@@ -52,8 +52,8 @@
                         @foreach ($ingredients as $ingredient)
                             <div class="col-4 d-flex flex-column justfy-content-center align-items-center">
                                 <span class="mb-2">{{ $ingredient->title }}</span>
-                                <input class="checkbox" name="techs[]" type="checkbox" value="{{ $ingredient->id }}"
-                                    {{ in_array($ingredient->id, old('techs', [])) ? 'checked' : '' }}>
+                                <input class="checkbox" name="ingredients[]" type="checkbox" value="{{ $ingredient->id }}"
+                                    {{ in_array($ingredient->id, old('ingredients', [])) ? 'checked' : '' }}>
                             </div>
                         @endforeach
                     </div>
