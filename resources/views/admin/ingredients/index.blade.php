@@ -11,7 +11,7 @@ Ingredients
         <div class="w-75">
             <div class="d-flex justify-content-between align-items-center mb-1 mt-3">
                 <span class="title"><strong>{{$ingredient['name']}}</strong></span>
-                <button class="btn btn-outline-danger ms-3 delete-button">
+                <button class="btn btn-outline-danger ms-3 myBtn">
                     <i class="fa-solid fa-trash"></i>
                 </button>
             </div>
