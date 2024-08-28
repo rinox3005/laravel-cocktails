@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Mail\NewCocktail;
 use Illuminate\Http\Request;
 use App\Models\Cocktail;
 use App\Http\Requests\StoreCocktailRequest;
 use App\Http\Requests\UpdateCocktailRequest;
+use Illuminate\Mail\Mailer;
+use Illuminate\Support\Facades\Mail as Mail;
 
 class CocktailsController extends Controller
 {
@@ -69,6 +72,8 @@ class CocktailsController extends Controller
         $cocktail->preparation = $data['preparation'];
         $cocktail->is_available = $data['is_available'];
         $cocktail->save();
+
+        Mail::to('example@dominio.com')->send(new NewCocktail($cocktail));
 
         return redirect()->route('admin.cocktails.show', $cocktail->id)->with('message', 'Cocktail ' . $cocktail->name . ' successfully created');
     }
